@@ -42,6 +42,11 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookHolder> {
         return data.size();
     }
 
+    public void setData(List<Book> data){
+        this.data = data;
+        notifyDataSetChanged();
+    }
+
     static class BookHolder extends RecyclerView.ViewHolder{
         TemplateBookBinding binding;
         public BookHolder(View itemView) {
